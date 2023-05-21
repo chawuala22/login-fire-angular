@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-fire-angular-6de9c": {
+      "hosting": {
+        "login-fire-angular": [
+          "login-fire-angular-6de9c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-fire-angular-6de9c"
+  }
+}
