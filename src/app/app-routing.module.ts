@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+
 import { AuthRoutingModule } from './auth/auth.routing';
+import { PagesRoutingModule } from './pages/pages.routing';
+import { Page404Component } from './shared/page404/page404.component';
+import { SharedRoutingModule } from './shared/shared.routing';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
 
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), AuthRoutingModule],
+  imports: [
+    RouterModule.forRoot(routes),
+    AuthRoutingModule,
+    PagesRoutingModule,
+    SharedRoutingModule
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
