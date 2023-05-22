@@ -6,10 +6,27 @@
         alt="valorant"
       />
     </div>
-    <div class="container-info">
-      <h1>Login con firebase auth , google y apple xdxdxd</h1>
+    <div  *ngIf="!forgotBoolean" class="container-info">
+      <div  class="container-input">
+        <h1>Iniciar Sesión</h1>
       <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      </div>
+      <div class="container-forgot">
+      <a (click)="forgotBoolean = true"  >Olvidé contraseña</a>
+      <a routerLink="/register">No tengo cuenta</a>
+      </div>
+      <div class="container-button">
+        <button>Inciar sesión</button>
+      </div>
+      <p>ó</p>
+    </div>
+
+    <div *ngIf="forgotBoolean" class="container-forgot-input">
+      <h1>Ingresa tu correo para enviarte una pass</h1>
       <input type="text" name="" id="" />
     </div>
+
+
   </div>
 </div>
